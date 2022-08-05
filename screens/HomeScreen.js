@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import { useLayoutEffect } from 'react'
-import { Image, Text, TextInput, View } from 'react-native'
+import { Image, ScrollView, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import {
@@ -9,6 +9,8 @@ import {
   SearchIcon,
   UserIcon
 } from 'react-native-heroicons/outline'
+import Categories from '../components/Categories'
+import FeaturedRow from '../components/FeaturedRow'
 
 const HomeScreen = () => {
 
@@ -57,6 +59,38 @@ const HomeScreen = () => {
 
         <AdjustmentsIcon size={20} color='#00CCBB' />
       </View>
+
+
+      {/* Body */}
+      <ScrollView className='bg-gray-100'
+        contentContainerStyle={{
+          paddingBottom: 100
+        }}>
+        {/* Categories */}
+        <Categories />
+
+        {/* Featured Rows */}
+        <FeaturedRow
+          id='123'
+          title='Featured'
+          description='Paid Placements from Our Partners'
+        />
+
+        {/* Tasty Discounts */}
+        <FeaturedRow
+          id='1234'
+          title='Tasty Discounts'
+          description="Everyone's been Enjoying these Juicy Discounts!"
+        />
+
+        {/* Offers Near You */}
+        <FeaturedRow
+          id='12345'
+          title='Offers Near You'
+          description='Why Not Support your Local Restaurant Tonight!'
+        />
+
+      </ScrollView>
 
     </SafeAreaView>
   )
