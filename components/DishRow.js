@@ -1,9 +1,9 @@
 import { useCallback, useState } from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { useDispatch, useSelector } from 'react-redux'
+import Currency from 'react-currency-formatter'
 import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/solid'
 import { urlFor } from '../sanity'
-import Currency from 'react-currency-formatter'
-import { useDispatch, useSelector } from 'react-redux'
 import { addToBasket, removeFromBasket, selectBasketItemsById } from '../features/basketSlice'
 
 const DishRow = ({ id, name, description, price, image }) => {

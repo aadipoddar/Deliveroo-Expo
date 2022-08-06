@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ScrollView } from 'react-native'
-import CategoryCard from './CategoryCard'
 import sanityClient, { urlFor } from '../sanity'
+import CategoryCard from './CategoryCard'
 
 const Categories = () => {
 

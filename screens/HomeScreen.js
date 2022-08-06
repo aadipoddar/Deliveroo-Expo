@@ -1,7 +1,10 @@
-import { useNavigation } from '@react-navigation/native'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { Image, ScrollView, Text, TextInput, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Categories from '../components/Categories'
+import FeaturedRow from '../components/FeaturedRow'
+import sanityClient from '../sanity'
 
 import {
   AdjustmentsIcon,
@@ -9,9 +12,6 @@ import {
   SearchIcon,
   UserIcon
 } from 'react-native-heroicons/outline'
-import Categories from '../components/Categories'
-import FeaturedRow from '../components/FeaturedRow'
-import sanityClient from '../sanity'
 
 const HomeScreen = () => {
 
