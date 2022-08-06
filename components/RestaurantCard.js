@@ -16,7 +16,7 @@ const RestaurantCards = ({
     lat,
 }) => {
 
-    const navigation = useNavigation();
+    const navigation = useNavigation()
 
     return (
         <TouchableOpacity
@@ -34,7 +34,7 @@ const RestaurantCards = ({
                     lat,
                 })
             }}
-        className='bg-white mr-4 shadow'>
+            className='bg-white mr-4 shadow'>
 
             <Image
                 source={{ uri: urlFor(imgUrl).url() }}
